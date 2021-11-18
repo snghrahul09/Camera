@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+#record-video{
+    position: fixed;
+    /* z-index: 10; */
+    right: 6rem;
+    top: 36vh;
+    border-radius: 50%;
+    border: 8px solid white;
+    background-color: black;
+    height: 6rem;
+    width: 6rem;
+}
+#click-picture{
+    position: fixed;
+    /* z-index: 10; */
+    right: 6rem;
+    top: 47vh;
+    border-radius: 50%;
+    border: 8px solid white;
+    background-color: black;
+    height: 6rem;
+    width: 6rem;
+}
+#record-div,#click-div{
+    height: 70%;
+    width: 80%;
+    margin: auto;
+    border-radius: 50%;
+}
+#record-div{
+    background-color: red;
+}
+#click-div{
+    background-color: white;
+}
+.video-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow: hidden;
+}
+video{
+    height: 100vh;
+    width: 100vw;
+}
+#take-picture{
+    position: fixed;
+    z-index: 10;
+    right: 6rem;
+    top: 55vh;
+    border-radius: 50%;
+    border: none;
+    height: 5rem;
+    width: 5rem;
+}
+.filter-container{
+    border: 1px solid white;
+    position: fixed;
+    top: 12vh;
+    left: 5.3vw;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 5.5vw;
+}
+.filter{
+    border: 1px solid white;
+    height: 20%;
+    background-image: url("https://picsum.photos/id/237/200/300");
+    background-blend-mode: color-burn;
+    background-size: cover;
+}
+.recording-animation{
+    animation: shrinkInOut 0.8s infinite;
+
+}
+.capture-animation{
+    animation: shrinkInOut 1s;
+}
+@keyframes shrinkInOut {
+    0%{
+        transform: scale(1);
+
+    }50%{
+       transform: scale(1.2);
+    }100%{
+       transform: scale(1);
+    }
+    
+}
+#record-video,#click-picture,.filter-container{
+    z-index: 5;
+}
+.zoom{
+    height: 15vh;
+    width: 4vw;
+    position: fixed;
+    top: 12vh;
+    right: 11vh;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+
+}
+.zoom button{
+    color: white;
+    background-color: #222;
+    border: none;
+    outline: none;
+    height: 50%;
+    font-size: 3.5rem;
+
+}
